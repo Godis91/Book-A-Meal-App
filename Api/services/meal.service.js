@@ -16,7 +16,7 @@ const MealService = {
     const newId = lastId + 1;
     meal.id = newId;
 
-    DummyData.push(meal);
+    DummyData.meals.push(meal);
     return meal;
   },
 
