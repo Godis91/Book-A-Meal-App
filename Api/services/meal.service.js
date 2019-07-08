@@ -5,7 +5,8 @@ const MealService = {
   fetchAllMeals() {
     const validMeals = DummyData.meals.map(meal => {
       const { id, name, size, price } = meal;
-      return Meal(id, name, size, price);
+      const newMeal = { id, name, size, price };
+      return newMeal;
     });
     return validMeals;
   },
@@ -21,7 +22,7 @@ const MealService = {
   },
 
   getMealById(id) {
-    DummyData.meals.find(meal => meal.id === id);
+    const meal = DummyData.meals.find(meal => meal.id === id);
     return meal || {};
   }
 };
